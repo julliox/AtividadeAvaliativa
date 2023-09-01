@@ -1,5 +1,15 @@
+@font-face {
+    font-family: TT travels;
+    src: url(tt_travels/TT\ Travels\ Trial\ ExtraBold.otf);
+}
+
+@font-face {
+    font-family: TT Chocolates;
+    src: url(tt_travels/TT\ Travels\ Trial\ Medium.otf);
+}
+
 html, body{
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Fraunces', serif;
     font-size: 20px;
     height: 100%;
 }
@@ -16,6 +26,42 @@ h1,h2,h3,h4,h5,p,span {
     color: #666;
 }
 
+a { 
+    color: currentColor;
+} 
+
+h1{
+    font-family: 'Fraunces', serif;
+    font-style: italic ;
+    font-weight: 600;
+    font-size: 100px;
+    color: white;
+}
+
+h2{
+    font-family: 'TT Chocolates', serif;
+    font-weight: 400;
+    font-size: 25px;
+    color: white;
+    margin-top: 20px;
+}
+
+h3{
+    font-family: 'TT Travels', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 25px;
+    color: white;
+}
+
+h4{
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 15px;
+    color: white;
+}
+
 .container {
     max-width: 1920px;
     width: 100%;
@@ -29,7 +75,7 @@ header {
 }
 
 nav {
-    position: fixed;
+    position: sticky;
     top: 0;
     height: 100px;
     width: 100%;
@@ -39,7 +85,7 @@ nav {
 
 nav:after{
     clear: both;
-    content: " ";
+    content: "";
     display: block;
 }
 
@@ -48,6 +94,7 @@ nav:after{
     position: relative;
     margin-left: auto;
     margin-right: auto;
+
 }
 
 #logo {
@@ -77,4 +124,100 @@ nav:after{
 
 .nav-container li a:hover {
     color: #a36633;
+}
+
+#main {
+    margin-top: 8%;
+    position: relative;
+    text-align: center;
+}
+
+/*ESTILIZAÇÃO DOS BOTÕES*/
+
+#botoes {
+    position: relative;
+    margin-top: 2%;
+
+}
+
+button a {
+    text-decoration: none;
+}
+
+:root {
+    --cor-primaria-success: rgb(75, 200, 138);
+    --cor-hover-success: rgb(116, 158, 137);
+    --cor-secundaria-success: rgb(27, 66, 50);
+    
+    --cor-primaria-info:rgb(255,255,255);
+    --cor-hover-info: rgb(200,162,135);
+    --cor-secundaria-info: rgb(200,162,135);
+
+    --cor-primaria-danger: rgb(200, 75, 75);
+    --cor-hover-danger: rgb(158, 116, 116);
+    --cor-secundaria-danger: rgb(58, 22, 22);
+}
+
+.btn {
+    border: none;
+    padding: 14px 45px;
+    margin-left: 3%;
+    margin-right: 3%;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background .3s;
+    border-radius: 2px;
+    font-size: 100%;
+    font-family: 'TT Travels';
+    
+    
+}
+
+/*SUCCESS*/
+.btn-success {
+    background-color: var(--cor-primaria-success);
+    outline: none;
+    color: var(--cor-secundaria-success)
+}
+
+.btn-success:hover {
+    background-color: var(--cor-hover-success);
+}
+
+.btn-success:active {
+    color:var(--cor-primaria-success);
+    background-color: var(--cor-secundaria-success);
+}
+
+/*INFO*/
+.btn-info {
+    background-color: var(--cor-primaria-info);
+    outline: none;
+    color: var(--cor-secundaria-info)
+}
+
+.btn-info:hover {
+    background-color: var(--cor-hover-info);
+    color: var(--cor-primaria-info);
+}
+
+.btn-info:active {
+    color:var(--cor-primaria-info);
+    background-color: var(--cor-secundaria-info);
+}
+
+/*DANGER*/
+.btn-danger {
+    background-color: var(--cor-primaria-danger);
+    outline: none;
+    color: var(--cor-secundaria-danger)
+}
+
+.btn-succdangeress:hover {
+    background-color: var(--cor-hover-danger);
+}
+
+.btn-danger:active {
+    color:var(--cor-primaria-danger);
+    background-color: var(--cor-secundaria-danger);
 }
