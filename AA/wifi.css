@@ -4,8 +4,18 @@
 }
 
 @font-face {
+    font-family: TT travels D;
+    src: url(tt_travels/TT\ Travels\ Trial\ DemiBold.otf);
+}
+
+@font-face {
     font-family: TT Chocolates;
-    src: url(tt_travels/TT\ Travels\ Trial\ Medium.otf);
+    src: url(tt_travels/TT\ Travels\ Trial\ Bold.otf);
+}
+
+@font-face {
+    font-family: TT Chocolates l;
+    src: url(tt_travels/TT\ Travels\ Trial\ Light.otf);
 }
 
 html, body{
@@ -16,7 +26,7 @@ html, body{
 
 body {
     margin: 0;
-    background-image:url(imagens/Home.png);
+    background-color: #CFB4AC;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -31,11 +41,11 @@ a {
 } 
 
 h1{
-    font-family: 'Fraunces', serif;
-    font-style: italic ;
-    font-weight: 600;
-    font-size: 100px;
+    font-family: 'TT Chocolates', serif;
+    font-weight: 400;
+    font-size: 80px;
     color: white;
+    text-align: center;
 }
 
 h2{
@@ -126,103 +136,54 @@ nav:after{
     color: #a36633;
 }
 
-#main {
-    margin-top: 8%;
+/*Estilizando o pricipal*/
+
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     position: relative;
+    min-height: 100vh;
+}
+
+.wifi {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 2em;
+    padding-bottom: 15em;
+    
+}
+
+.img {
+    height: 35em;
+    width: auto;
+    
+    border-radius: 5px;
+}
+
+.imagem {
+    padding-bottom: 150px;
+    padding-top: 30px;
+}
+
+/*Estilizando o Footer*/
+
+.titulo {
+    font-family: 'Fraunces', serif;
+    font-size: 50px;
     text-align: center;
+    margin-top: 40px;
 }
 
-/*ESTILIZAÇÃO DOS BOTÕES*/
-
-#botoes {
-    position: relative;
-    margin-top: 2%;
-
+.descricao {
+    font-family: 'TT Chocolates';
+    font-size: 25px;
+    text-align: center;
+    margin-top: 20px;
+    color: #4D3F28;
 }
-
-button a {
-    text-decoration: none;
-}
-
-:root {
-    --cor-primaria-success: rgb(75, 200, 138);
-    --cor-hover-success: rgb(116, 158, 137);
-    --cor-secundaria-success: rgb(27, 66, 50);
-    
-    --cor-primaria-info:rgb(255,255,255);
-    --cor-hover-info: rgb(200,162,135);
-    --cor-secundaria-info: rgb(200,162,135);
-
-    --cor-primaria-danger: rgb(200, 75, 75);
-    --cor-hover-danger: rgb(158, 116, 116);
-    --cor-secundaria-danger: rgb(58, 22, 22);
-}
-
-.btn {
-    border: none;
-    padding: 14px 45px;
-    margin-left: 3%;
-    margin-right: 3%;
-    text-decoration: none;
-    cursor: pointer;
-    transition: background .3s;
-    border-radius: 2px;
-    font-size: 100%;
-    font-family: 'TT Travels';
-    
-    
-}
-
-/*SUCCESS*/
-.btn-success {
-    background-color: var(--cor-primaria-success);
-    outline: none;
-    color: var(--cor-secundaria-success)
-}
-
-.btn-success:hover {
-    background-color: var(--cor-hover-success);
-}
-
-.btn-success:active {
-    color:var(--cor-primaria-success);
-    background-color: var(--cor-secundaria-success);
-}
-
-/*INFO*/
-.btn-info {
-    background-color: var(--cor-primaria-info);
-    outline: none;
-    color: var(--cor-secundaria-info)
-}
-
-.btn-info:hover {
-    background-color: var(--cor-hover-info);
-    color: var(--cor-primaria-info);
-}
-
-.btn-info:active {
-    color:var(--cor-primaria-info);
-    background-color: var(--cor-secundaria-info);
-}
-
-/*DANGER*/
-.btn-danger {
-    background-color: var(--cor-primaria-danger);
-    outline: none;
-    color: var(--cor-secundaria-danger)
-}
-
-.btn-succdangeress:hover {
-    background-color: var(--cor-hover-danger);
-}
-
-.btn-danger:active {
-    color:var(--cor-primaria-danger);
-    background-color: var(--cor-secundaria-danger);
-}
-
-/*FOOTER*/
 
 footer{
     position:absolute;
@@ -277,3 +238,97 @@ footer{
     height: 30px;
     margin-top: 40px;
 }
+
+/*ESTILIZAÇÃO DOS BOTÕES*/
+
+#botoes {
+    position: relative;
+    margin-top: 2%;
+
+}
+
+button a {
+    text-decoration: none;
+}
+
+:root {
+    --cor-primaria-success: rgb(255, 255, 255);
+    --cor-hover-success: rgb(200,178,184);
+    --cor-secundaria-success: rgb(200,162,135);
+    
+    --cor-primaria-info:rgb(255,255,255);
+    --cor-hover-info: rgb(200,162,135);
+    --cor-secundaria-info: rgb(200,162,135);
+
+    --cor-primaria-danger: rgb(200, 75, 75);
+    --cor-hover-danger: rgb(158, 116, 116);
+    --cor-secundaria-danger: rgb(58, 22, 22);
+}
+
+.btn {
+    border: none;
+    padding: 14px 45px;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 80px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background .3s;
+    border-radius: 2px;
+    font-size: 100%;
+    font-family: 'TT Travels';
+    
+    
+}
+
+/*SUCCESS*/
+.btn-success {
+    background-color: var(--cor-primaria-success);
+    outline: none;
+    color: var(--cor-secundaria-success)
+}
+
+.btn-success:hover {
+    background-color: var(--cor-hover-success);
+    color: var(--cor-primaria-success);
+}
+
+.btn-success:active {
+    color:var(--cor-primaria-success);
+    background-color: var(--cor-secundaria-success);
+}
+
+/*INFO*/
+.btn-info {
+    background-color: var(--cor-primaria-info);
+    outline: none;
+    color: var(--cor-secundaria-info)
+}
+
+.btn-info:hover {
+    background-color: var(--cor-hover-info);
+    color: var(--cor-primaria-info);
+}
+
+.btn-info:active {
+    color:var(--cor-primaria-info);
+    background-color: var(--cor-secundaria-info);
+}
+
+/*DANGER*/
+.btn-danger {
+    background-color: var(--cor-primaria-danger);
+    outline: none;
+    color: var(--cor-secundaria-danger)
+}
+
+.btn-succdangeress:hover {
+    background-color: var(--cor-hover-danger);
+}
+
+.btn-danger:active {
+    color:var(--cor-primaria-danger);
+    background-color: var(--cor-secundaria-danger);
+}
+
+/*FOOTER*/
